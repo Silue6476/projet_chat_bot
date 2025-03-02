@@ -45,7 +45,7 @@ body {
 .cover-section {
     width: 100%;
     height: 300px;
-    background: url('/image\ senoufo.jpg') no-repeat center center/cover; /* Remplace par ton image */
+    background: url('image senoufo.jpg') no-repeat center center/cover; /* Remplace par ton image */
     background-size: cover; /* Assure que l'image s'étend bien */
     display: flex;
     justify-content: center;

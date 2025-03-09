@@ -33,16 +33,16 @@ async function generateResponse(botMsgDiv) {
         return;
     }
 
-    // Vérifier si la question est liée aux Sénoufo
-    if (!isSenoufoRelated(userMessage)) {
-        textElement.textContent = "Désolé, je ne peux répondre qu'aux questions concernant la culture, l'histoire, les traditions ou la langue des Sénoufo en Côte d'Ivoire.";
+    // Vérifier si la question est liée au sport et fitness
+    if (!isFitnessRelated(userMessage)) {
+        textElement.textContent = "Désolé, je ne peux répondre qu'aux questions concernant le sport, le fitness, la nutrition ou l'entraînement.";
         return;
     }
 
-    // Ajouter une instruction spécifique pour restreindre les réponses aux Sénoufo
+    // Ajouter une instruction spécifique pour restreindre les réponses au sport et fitness
     chatHistory.push({
         role: "user",
-        parts: [{ text: `Réponds uniquement en parlant de la culture, l'histoire, les traditions ou la langue des Sénoufo en Côte d'Ivoire : ${userMessage}` }]
+        parts: [{ text: `Réponds uniquement en parlant de sport, fitness, nutrition ou entraînement : ${userMessage}` }]
     });
 
     try {
@@ -70,27 +70,26 @@ async function generateResponse(botMsgDiv) {
     }
 }
 
-// Fonction pour vérifier si une question est liée aux Sénoufo
-function isSenoufoRelated(message) {
+// Fonction pour vérifier si une question est liée au sport et fitness
+function isFitnessRelated(message) {
     const keywords = [
-        "sénoufo", "côte d'ivoire", "culture", "tradition", "langue", "masques", 
-        "histoire", "artisanat", "religion", "communauté", "village", "rituels", "senoufo","nordisse", "peuples", "savane", "gbon"
+        "sport", "fitness", "entraînement", "nutrition", "exercice", "musculation", "cardio", "perte de poids", "endurance", "récupération", "santé", "programme", "objectifs"
     ];
     return keywords.some(keyword => message.toLowerCase().includes(keyword));
 }
 
 // Fonction pour détecter les salutations
 function isGreeting(message) {
-    const greetings = ["salut", "bonjour", "coucou", "hello", "bonsoir", "hi" ,"Hi",];
+    const greetings = ["salut", "bonjour", "coucou", "hello", "bonsoir", "hi", "Hi"];
     return greetings.some(greeting => message.toLowerCase().includes(greeting));
 }
 
 // Fonction pour gérer les salutations
 function handleGreeting(message) {
     const responses = [
-        "Bonjour ! Comment puis-je vous aider avec les Sénoufo aujourd'hui ?",
-        "Salut ! Je suis ici pour discuter de la culture Sénoufo. Que souhaitez-vous savoir ?",
-        "Hello ! Prêt à explorer les traditions fascinantes des Sénoufo ?"
+        "Bonjour ! Comment puis-je vous aider avec vos objectifs sportifs aujourd'hui ?",
+        "Salut ! Je suis ici pour discuter de sport et de fitness. Que souhaitez-vous savoir ?",
+        "Hello ! Prêt à atteindre vos objectifs fitness ?"
     ];
     return responses[Math.floor(Math.random() * responses.length)];
 }
@@ -122,5 +121,13 @@ promptForm.addEventListener("submit", (e) => {
         botMsgDiv.classList.remove("loading-message");
         // Faire défiler vers le bas
         chatsContainer.scrollTop = chatsContainer.scrollHeight;
+    });
+});
+
+// Gestion des suggestions de questions
+document.querySelectorAll(".suggestion-btn").forEach(button => {
+    button.addEventListener("click", () => {
+        promptInput.value = button.textContent;
+        promptForm.dispatchEvent(new Event("submit"));
     });
 });

@@ -3,43 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assistant IA - Culture Sénoufo</title>
+    <meta name="description" content="Assistant IA spécialisé en sport et fitness. Posez des questions sur l'entraînement, la nutrition, les exercices et les programmes de fitness.">
+    <meta name="keywords" content="sport, fitness, entraînement, nutrition, exercices, programmes, santé, musculation, cardio">
+    <meta name="author" content="Assistant IA Fitness">
+    <link rel="icon" href="fitness-icon.ico" type="image/x-icon">
+    <title>Assistant IA - Sport & Fitness</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header class="cover-section" role="banner">
+        <div class="cover-content">
+            <h1>Assistant IA - Sport & Fitness</h1>
+            <p aria-live="polite">Obtenez des conseils personnalisés sur l'entraînement, la nutrition et le fitness !</p>
+        </div>
+    </header>
 
-    
-    <!-- Section À Propos -->
-    
-    <!-- Section de couverture -->
-    <header class="cover-section">
-    <div class="cover-content">
-        <h1>Assistant IA - Culture Sénoufo</h1>
-        <marquee width ="60%"  direction ="left" height ="100px"><p>Découvrez tout sur la culture, l'histoire et les traditions des Sénoufo !</p></marquee>
-    </div>
-</header>
+    <main role="main">
+        <section class="site-description" aria-labelledby="description-title">
+            <h2 id="description-title">Bienvenue</h2>
+            <p>Bienvenue sur notre plateforme dédiée au sport et au fitness. Posez des questions sur les exercices, la nutrition, les programmes d'entraînement, et bien plus encore. Notre assistant IA est spécialisé dans le domaine du fitness et se fera un plaisir de vous aider.</p>
+        </section>
 
-<!-- Description du site -->
-<div class="site-description">
-    <p>Bienvenue sur notre plateforme dédiée à la culture Sénoufo. Ici, vous pouvez poser des questions sur leur histoire, leurs traditions, leur artisanat et bien plus encore. Notre assistant IA est spécialisé dans cette riche culture et se fera un plaisir de vous répondre.</p>
-</div>
-    <!-- Conteneur des messages -->
-    <div class="chats-container">
-        <!-- Messages seront insérés dynamiquement ici -->
-    </div>
+        <section class="chats-container" aria-labelledby="chat-title">
+            <h2 id="chat-title">Conversation</h2>
+            <!-- Messages seront insérés dynamiquement ici -->
+        </section>
 
-    <!-- Formulaire de soumission -->
-    <div class="prompt-container">
-        <form id="prompt-form" class="prompt-form">
-            <input type="text" id="prompt-input" placeholder="Posez votre question..." required>
-            <button id="send-prompt-btn" class="material-symbols-rounded">Envoyer</button>
-        </form>
-    </div>
+        <section class="prompt-container" aria-labelledby="prompt-title">
+            <h2 id="prompt-title">Posez votre question</h2>
+            <form id="prompt-form" class="prompt-form">
+                <input type="text" id="prompt-input" placeholder="Posez votre question..." required aria-label="Entrez votre question">
+                <button id="send-prompt-btn" class="material-symbols-rounded" aria-label="Envoyer">Envoyer</button>
+            </form>
+        </section>
 
+        <section class="suggestions-container" aria-labelledby="suggestions-title">
+            <h2 id="suggestions-title">Suggestions de questions</h2>
+            <div class="suggestions-buttons">
+                <button class="suggestion-btn">Comment commencer un programme de musculation ?</button>
+                <button class="suggestion-btn">Quels sont les meilleurs exercices pour perdre du poids ?</button>
+                <button class="suggestion-btn">Comment améliorer mon endurance ?</button>
+                <button class="suggestion-btn">Quels aliments privilégier pour la récupération musculaire ?</button>
+            </div>
+        </section>
+    </main>
 
-    <footer class="footer">
-        <p>© 2025 Assistant IA Sénoufo. Tous droits réservés. Découvrez la richesse de la culture Sénoufo grâce à notre assistant intelligent.</p>
+    <footer class="footer" role="contentinfo">
+        <p>© 2025 Assistant IA Fitness. Tous droits réservés. Obtenez des conseils personnalisés pour atteindre vos objectifs sportifs.</p>
     </footer>
 
     <script src="script.js"></script>

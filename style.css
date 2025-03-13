@@ -1,101 +1,119 @@
-/* Réinitialisation */
+/* Réinitialisation des styles par défaut */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les paddings par défaut */
+    box-sizing: border-box; /* Inclut les bordures et paddings dans les dimensions des éléments */
 }
 
+/* Style global pour le corps de la page */
 body {
-    
-        font-family: 'Segoe UI', Roboto, sans-serif;
-        line-height: 1.6;
+    font-family: 'Segoe UI', Roboto, sans-serif; /* Police de base pour tout le texte */
+    line-height: 1.6; /* Hauteur de ligne confortable pour la lisibilité */
 }
+
+/* Style pour la section de la bannière */
 .cover-section {
-    width: 100%;
-    height: 300px;
-    background: url('./R.jpeg') center/cover;
-    color: white;
-    text-align: center;
-    padding: 40px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    width: 100%; /* Largeur maximale */
+    height: 300px; /* Hauteur fixe */
+    background: url('./R.jpeg') center/cover; /* Image de fond centrée et couvrante */
+    color: white; /* Texte blanc pour contraster avec l'image */
+    text-align: center; /* Centre le contenu horizontalement */
+    padding: 40px; /* Espace autour du contenu */
+    border-radius: 10px; /* Coins arrondis */
+    margin-bottom: 20px; /* Espace sous la section */
 }
 
+/* Style pour la section de description */
 .site-description {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
+    background: white; /* Fond blanc */
+    padding: 20px; /* Espace interne */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Ombre légère pour un effet 3D */
+    margin-bottom: 20px; /* Espace sous la section */
 }
 
+/* Style pour la zone des messages */
 .chats-container {
-    background: white;
-    height: 400px;
-    padding: 15px;
-    border-radius: 10px;
-    overflow-y: auto;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
+    background: white; /* Fond blanc */
+    height: 400px; /* Hauteur fixe */
+    padding: 15px; /* Espace interne */
+    border-radius: 10px; /* Coins arrondis */
+    overflow-y: auto; /* Barre de défilement verticale si nécessaire */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Ombre légère */
+    margin-bottom: 20px; /* Espace sous la section */
 }
 
+/* Style général pour les messages */
 .message {
-    padding: 10px 15px;
-    border-radius: 15px;
-    margin: 5px 0;
-    max-width: 80%;
+    padding: 10px 15px; /* Espace autour du texte */
+    border-radius: 15px; /* Coins arrondis */
+    margin: 5px 0; /* Espace entre les messages */
+    max-width: 80%; /* Largeur maximale pour éviter les messages trop larges */
 }
 
+/* Style spécifique pour les messages de l'utilisateur */
 .user-message {
-    font-weight: 500;
+    font-weight: 500; /* Texte en gras pour distinguer les messages utilisateur */
 }
 
+/* Style spécifique pour les messages du bot */
 .bot-message {
-    font-weight: 400;
-    color: #0288d1;
+    font-weight: 400; /* Texte normal */
+    color: #0288d1; /* Couleur bleue pour les réponses du bot */
 }
 
+/* Style pour le formulaire de saisie */
 .prompt-form {
-    background: white;
-    padding: 10px;
-    border-radius: 50px;
-    display: flex;
-    gap: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background: white; /* Fond blanc */
+    padding: 10px; /* Espace interne */
+    border-radius: 50px; /* Coins arrondis pour un design moderne */
+    display: flex; /* Alignement horizontal des éléments */
+    gap: 10px; /* Espace entre le champ de texte et le bouton */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Ombre légère */
 }
 
+/* Style pour le champ de saisie */
 #prompt-input {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 50px;
+    flex: 1; /* Le champ de texte prend tout l'espace disponible */
+    padding: 10px; /* Espace interne */
+    border: none; /* Supprime la bordure */
+    border-radius: 50px; /* Coins arrondis */
 }
 
+/* Style pour les boutons de suggestions */
 .suggestions-buttons {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: flex; /* Alignement horizontal des boutons */
+    gap: 10px; /* Espace entre les boutons */
+    flex-wrap: wrap; /* Les boutons passent à la ligne si nécessaire */
+    justify-content: center; /* Centre les boutons horizontalement */
 }
 
+/* Style pour le texte des messages */
 .message-text {
-    font-size: 15px;
-    letter-spacing: 0.3px;
+    font-size: 15px; /* Taille de police confortable */
+    letter-spacing: 0.3px; /* Espacement entre les lettres pour une meilleure lisibilité */
 }
 
+/* Style pour chaque bouton de suggestion */
 .suggestion-btn {
-    background: #0288d1;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 0.3s;
+    background: #0288d1; /* Fond bleu */
+    color: white; /* Texte blanc */
+    border: none; /* Supprime la bordure */
+    padding: 10px 15px; /* Espace interne */
+    border-radius: 20px; /* Coins arrondis */
+    cursor: pointer; /* Curseur en forme de main */
+    transition: 0.3s; /* Effet de transition fluide */
 }
 
+/* Effet hover pour les boutons de suggestions */
+.suggestion-btn:hover {
+    background: #01579b; /* Fond plus foncé au survol */
+}
+
+/* Style pour le pied de page */
 .footer {
-    text-align: center;
-    padding: 10px;
-    color: #666;
-    margin-top: 20px;
+    text-align: center; /* Centre le contenu horizontalement */
+    padding: 10px; /* Espace interne */
+    color: #666; /* Texte gris clair */
+    margin-top: 20px; /* Espace au-dessus du pied de page */
 }
